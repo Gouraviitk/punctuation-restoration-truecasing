@@ -56,3 +56,5 @@ I will train a multitask model as well to support truecasing and punctuations, b
 | Precision  | 99.74 | 99.98 | 99.37 | 99.38 | 79.34
 | Recall  | 99.74 | 99.63 | 99.32 | 98.17 | 81.48
 | F1  | **99.74** | **99.81** | **99.34** | **98.78** | **80.40**
+
+We get better results when using CRF as expected.
