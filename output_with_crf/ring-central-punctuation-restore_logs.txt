@@ -1,0 +1,18 @@
+Namespace(batch_size=32, cuda=True, data_path='data/', decay=0, epoch=3, freeze_pretrained=False, gradient_clip=-1, lr=5e-06, name='ring-central-punctuation-restore', pretrained_model='bert-base-uncased', save_path='output_with_crf', seed=1, sequence_length=64, use_crf=True)
+epoch: 0, Train loss: 0.04336506601820591, Train accuracy: 0.0
+epoch: 0, Val loss: 0.016800640025001607, Val accuracy: 0.9939252214354767
+epoch: 1, Train loss: 0.01484694939942888, Train accuracy: 0.0
+epoch: 1, Val loss: 0.015216895763379003, Val accuracy: 0.994402058892692
+epoch: 2, Train loss: 0.011225094201627792, Train accuracy: 0.0
+epoch: 2, Val loss: 0.015450980214318673, Val accuracy: 0.9943824628328064
+Precision: [0.99738598 0.99982462 0.99373269 0.99383062 0.79344262 0.97933759]
+Recall: [0.99740123 0.99632995 0.99315368 0.98171745 0.81481481 0.97925257]
+F1 score: [0.9973936  0.99807423 0.9934431  0.9877369  0.80398671 0.97929508]
+Accuracy:0.9946838240072788
+Confusion Matrix[[130491      0     25      0    315]
+ [    15   5701      2      1      3]
+ [    34      1  13636      6     53]
+ [     5      0     21   1772      7]
+ [   288      0     38      4   1452]]
+99.98246229393195 99.63299545613422 99.80742296918767 99.37326920274012 99.31536780772032 99.34431006848317 99.38306225462703 98.17174515235457 98.77369007803792 79.34426229508198 81.48148148148148 80.39867109634552
+

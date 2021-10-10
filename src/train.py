@@ -56,7 +56,7 @@ sequence_len = args.sequence_length
 
 # Datasets
 
-train_set = Dataset(os.path.join(args.data_path, 'train.tsv'), tokenizer=tokenizer, sequence_len=sequence_len)
+train_set = Dataset(os.path.join(args.data_path, 'train_sample.tsv'), tokenizer=tokenizer, sequence_len=sequence_len)
 val_set = Dataset(os.path.join(args.data_path, 'val.tsv'), tokenizer=tokenizer, sequence_len=sequence_len)
 test_set = Dataset(os.path.join(args.data_path, 'test.tsv'), tokenizer=tokenizer, sequence_len=sequence_len)
 print('Datasets are processed:\n')
@@ -196,8 +196,6 @@ def train():
             y_mask = y_mask.view(-1)
             if args.use_crf:
                 loss = deep_punctuation.log_likelihood(x, att, y)
-                # y_predict = deep_punctuation(x, att, y)
-                # y_predict = y_predict.view(-1)
                 y = y.view(-1)
             else:
                 y_predict = deep_punctuation(x, att)

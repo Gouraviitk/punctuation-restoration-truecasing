@@ -50,10 +50,13 @@ class BertForPunctuationCRF(nn.Module):
         x = self.bert_output(x, attn_masks)
         attn_masks = attn_masks.byte()
         dec_out = self.crf.decode(x, mask=attn_masks)
+
+        #print(len(dec_out),x.shape, y.shape, dec_out)
         
         y_pred = torch.zeros(y.shape).long().to(y.device)
         
         for i in range(len(dec_out)):
-            y_pred[i :len(dec_out[i])] = torch.tensor(dec_out[i]).to(y.device)
+            #print(i, len(dec_out[i]), y_pred.shape)
+            y_pred[i, :len(dec_out[i])] = torch.tensor(dec_out[i]).to(y.device)
         return y_pred
 
