@@ -50,7 +50,7 @@ def true_casing(text):
  
     nlp = stanfordnlp.Pipeline(processors='tokenize,pos')
     doc = nlp(sentences_capitalized)
-    words_to_uppercase = []
+    words_to_uppercase = ['i'] # I is always capital
     for sent in doc.sentences:
         for word in sent.words:
             if word.upos in ["PROPN","NNS"]:
@@ -129,7 +129,7 @@ def inference():
         print('Punctuated text: ', result)
         result = true_casing(result)
         print('Punctuated and Truecased output: ', result)
-        f_out.write(result)
+        f_out.write(result+'\n')
 
 if __name__ == '__main__':
     inference()

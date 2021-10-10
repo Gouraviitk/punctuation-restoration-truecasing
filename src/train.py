@@ -56,7 +56,7 @@ sequence_len = args.sequence_length
 
 # Datasets
 
-train_set = Dataset(os.path.join(args.data_path, 'train_sample.tsv'), tokenizer=tokenizer, sequence_len=sequence_len)
+train_set = Dataset(os.path.join(args.data_path, 'train.tsv'), tokenizer=tokenizer, sequence_len=sequence_len)
 val_set = Dataset(os.path.join(args.data_path, 'val.tsv'), tokenizer=tokenizer, sequence_len=sequence_len)
 test_set = Dataset(os.path.join(args.data_path, 'test.tsv'), tokenizer=tokenizer, sequence_len=sequence_len)
 print('Datasets are processed:\n')
