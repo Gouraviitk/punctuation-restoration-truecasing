@@ -34,8 +34,20 @@ More layers/models can be simply added in [here](src/model.py)
 
 ## Our results
 
-|  | O | APOSTROPHE | PERIOD | Q. MARK | COMMA |
-| ------------- | ------------- |  ------------- |  ------------- |  ------------- |
-| Precision  | Content Cell  |Content Cell  |Content Cell  |Content Cell  |
-| Recall  | Content Cell  |  Content Cell  |Content Cell  |Content Cell  |
-| Recall  | Content Cell  |  Content Cell  |Content Cell  |Content Cell  |
+**Without CRF**
+
+| Predictions (left) | O | APOSTROPHE | PERIOD | Q. MARK | COMMA |
+| ------------- | ------------- |  ------------- |  ------------- |  ------------- |------------- |
+| **Actual (Down)**  |  |  |  |  |  |
+| Precision  | 99.74 | 99.86 | 99.21 | 98.33 | 76.93
+| Recall  | 99.68 | 99.68 | 99.21 | 98.11 | 81.03
+| F1  | 99.71 | 99.77 | 99.21 | 98.22 | 78.93 |
+
+**With CRF**
+
+| Predictions (left) | O | APOSTROPHE | PERIOD | Q. MARK | COMMA |
+| ------------- | ------------- |  ------------- |  ------------- |  ------------- |------------- |
+| **Actual (Down)**  |  |  |  |  |  |
+| Precision  | 99.74 | 99.86 | 99.21 | 98.33 | 76.93
+| Recall  | 99.68 | 99.68 | 99.21 | 98.11 | 81.03
+| F1  | 99.71 | 99.77 | 99.21 | 98.22 | 78.93 |
